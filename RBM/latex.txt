@@ -1,0 +1,32 @@
+sigm1
+
+\begin{align*}
+P(\hat{h}=1|v) &= \frac{P(\hat{h}=1,v)}{P(v)}\\
+&=\frac{e^{-E_\theta(v, \hat{h}=1)}}{\sum_{h} e^{-E_\theta(v, h)}}\ \ \ (bayes)\\
+&=\frac{e^{-E_\theta(v, \hat{h}=1)}}{e^{-E_\theta(v, \hat{h}=1)}+e^{-E_\theta(v, \hat{h}=0)}}\\
+&=\frac{1}{1+e^{-E_\theta(v, \hat{h}=0)+E_\theta(v, \hat{h}=1)}}\ \ \ (energy\ function)\\
+&=\frac{1}{1+e^{-(\sum_{1}^{n_{v}}\sum_{1}^{n_{h}}w_{ji}vi+\sum_{1}^{n_{h}}b_{i})}}\\
+&=sigmoid(Wv+b)
+\end{align*}
+
+Ln
+
+
+\begin{align*}
+\ln  Ls &= \ln P(\hat{v})\\
+&=\ln (\frac{1}{Z}\sum_{h}e^{-E(\hat{v}, h)})\\
+&= \ln (\sum_{h}e^{-E(\hat{v}, h)}) - \ln Z\\
+&= \ln (\sum_{h}e^{-E(\hat{v}, h)}) - \ln (\sum_{v,h}e^{-E(v, h)})\\
+\end{align*}
+
+
+gradient
+
+\begin{align*}
+\frac{\partial{\ln P(\hat{v})}}{\partial{\theta }} &= \frac{\partial}{\partial\theta} \sum_{h}\ln e^{-E(\hat{v}, h)} - \frac{\partial}{\partial\theta} \sum_{v,h}\ln e^{-E(v, h)}\\
+&= -\frac{1}{\sum_{h}e^{-E(\hat{v}, h)}}\sum_{h}(e^{-E(\hat{v}, h)}\frac{\partial{E(\hat{v}, h)}}{\partial\theta})+
+\frac{1}{\sum_{v,h}e^{-E(v, h)}}\sum_{v,h}(e^{-E(\hat{v}, h)}\frac{\partial{E(v, h)}}{\partial\theta})\\
+&= -\sum_{h}P(h|\hat{v})\frac{\partial{E(\hat{v}, h)}}{\partial\theta}+ \sum_{v,h}P(v, h)\frac{\partial{E(v, h)}}{\partial\theta}\\
+&= -\sum_{h}P(h|\hat{v})\frac{\partial{E(\hat{v}, h)}}{\partial\theta}+ \sum_{v,h}P(v)P(h|v)\frac{\partial{E(v, h)}}{\partial\theta}\\
+&= -\sum_{h}P(h|\hat{v})\frac{\partial{E(\hat{v}, h)}}{\partial\theta}+ \sum_{v}P(v)\sum_{h}P(h|v)\frac{\partial{E(v, h)}}{\partial\theta}\\
+\end{align*}
