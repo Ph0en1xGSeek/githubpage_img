@@ -61,3 +61,29 @@ gradient
 &= -\sum_{h}P(h|\hat{v})\frac{\partial{E(\hat{v}, h)}}{\partial\theta}+ \sum_{v,h}P(v)P(h|v)\frac{\partial{E(v, h)}}{\partial\theta}\\
 &= -\sum_{h}P(h|\hat{v})\frac{\partial{E(\hat{v}, h)}}{\partial\theta}+ \sum_{v}P(v)\sum_{h}P(h|v)\frac{\partial{E(v, h)}}{\partial\theta}\\
 \end{align*}
+
+wij
+
+\begin{align*}
+\sum_{h}P(h|v)\frac{\partial{E(v, h)}}{\partial w_{ij}}&=-\sum_{h}P(h|v)h_{j}v_{i}\ \ \ (\neg h_{i}\ is\ the\ vector\ without\ h_{i})\\
+&=-\sum_{h}P(h_{j}|v)P(\neg h_{j}|v)h_{j}v_{i}\ \ \ (independence)\\
+&=-\sum_{h_{j}}P(h_{j}|v)h_{j}v_{i}\sum_{\neg h_{j}}P(\neg h_{j}|v)\ \ \ (\sum_{\neg h_{j}}P(\neg h_{j}|v)=1)\\
+&=-\sum_{h_{j}}P(h_{j}|v)h_{j}v_{i}\ \ \ (h_{j} = 0\ or\ 1)\\
+&=-P(h_{j}=1|v)*1*v_{i}-P(h_{j}=0|v)*0*v_{i}\\
+&=-P(h_{j}=1|v)v_{i}
+\end{align*}
+
+
+bj
+
+\begin{align*}
+\sum_{h}P(h|v)\frac{\partial{E(v, h)}}{\partial b_{j}}&=-P(h_{j}=1|v)
+\end{align*}
+
+
+ai
+
+\begin{align*}
+\sum_{h}P(h|v)\frac{\partial{E(v, h)}}{\partial a_{i}}&=-\sum_{h}P(h|v)v_{i}\\
+&=-v_{i}
+\end{align*}
