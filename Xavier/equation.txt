@@ -1,0 +1,30 @@
+Z
+
+z = w_{1}x_{1}+ w_{2}x_{2}+ ...+w_{n}x_{n}+b
+
+approx
+
+D(z) \approx D(x_{i})
+
+Dz
+
+\begin{align*}
+D(z) &= \sum^{n}D(w_{i}x_{i})\\
+&=\sum^{n}\left( E(w_{i})^{2}D(x_{i}) + E(x_{i})^{2}D(w_{i}) + D(w_{i})D(x_{i}) \right)
+\end{align*}
+
+Dzshort
+
+\begin{align*}
+D(z) &= \sum^{n}D(w_{i})D(x_{i})\\
+&= nD(w_{i})D(x_{i})
+\end{align*}
+
+
+Dw
+
+\begin{align*}
+D(w) &= \frac{1}{n}\\
+&= \frac{2}{n_{in}+n_{out}}
+\end{align*}
+
