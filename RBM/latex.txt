@@ -44,7 +44,7 @@ Ln
 
 
 \begin{align*}
-\ln  Ls &= \ln P(\hat{v})\\
+\ln  \pounds  &= \ln P(\hat{v})\\
 &=\ln (\frac{1}{Z}\sum_{h}e^{-E(\hat{v}, h)})\\
 &= \ln (\sum_{h}e^{-E(\hat{v}, h)}) - \ln Z\\
 &= \ln (\sum_{h}e^{-E(\hat{v}, h)}) - \ln (\sum_{v,h}e^{-E(v, h)})\\
@@ -86,4 +86,13 @@ ai
 \begin{align*}
 \sum_{h}P(h|v)\frac{\partial{E(v, h)}}{\partial a_{i}}&=-\sum_{h}P(h|v)v_{i}\\
 &=-v_{i}
+\end{align*}
+
+
+result
+
+\begin{align*}
+&\frac{\partial{\ln P(\hat{v})}}{\partial{w_{ij}}} = P(h_{j}=1|\hat{v})\hat{v_{i}}-\sum_{v}P(v) P(h_{j}=1|v)v_{i}\\
+&\frac{\partial{\ln P(\hat{v})}}{\partial{a_{i}}}= \hat{v_{i}}-\sum_{v}P(v)v_{i}\\
+&\frac{\partial{\ln P(\hat{v})}}{\partial{b_{j}}}= P(h_{j}=1|\hat{v})-\sum_{v}P(v) P(h_{j}=1|v)
 \end{align*}
