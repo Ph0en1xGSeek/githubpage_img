@@ -9,6 +9,37 @@ P(\hat{h}=1|v) &= \frac{P(\hat{h}=1,v)}{P(v)}\\
 &=sigmoid(Wv+b)
 \end{align*}
 
+sigm2
+
+\begin{align*}
+P(\hat{v}=1|h) &= sigmoid(hW^{T}+a)
+\end{align*}
+
+Pvh
+
+\begin{align*}
+P(v,h) &= \frac{1}{Z_{\theta}}e^{-E_{\theta}(v,h)}
+\end{align*}
+
+
+Z_theta
+
+\begin{align*}
+Z_{\theta}=\sum_{v,h}e^{-E_{\theta}(v,h)}
+\end{align*}
+
+Pv
+
+\begin{align*}
+P_{\theta}(v)=\sum_{h}P_{\theta}(v,h)=\frac{1}{Z_{\theta}}\sum_{h}e^{-E_{\theta}(v,h)}
+\end{align*}
+
+Ph
+
+\begin{align*}
+P_{\theta}(h)=\sum_{v}P_{\theta}(v,h)=\frac{1}{Z_{\theta}}\sum_{v}e^{-E_{\theta}(v,h)}
+\end{align*}
+
 Ln
 
 
