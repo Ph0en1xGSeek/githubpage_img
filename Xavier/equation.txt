@@ -28,3 +28,10 @@ D(w) &= \frac{1}{n}\\
 &= \frac{2}{n_{in}+n_{out}}
 \end{align*}
 
+
+result
+
+\begin{align*}
+D &= \frac{(b-a)^2}{12} = \frac{2}{n}\\\\
+w \sim U(&-\sqrt{\frac{6}{n_{in}+n_{out}}},\sqrt{\frac{6}{n_{in}+n_{out}}})\\ 
+\end{align*}
