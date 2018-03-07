@@ -1,0 +1,14 @@
+result1
+
+\underset{w}{max}F(w, \lambda) = \underset{w}{max}(w^{T}XX^{T}w+\lambda(1-w^{T}w))\\
+
+\frac{\partial{F}}{\partial{w_{i}}} = 2XX^{T}w_{i} - 2\lambda w_{i} = 0\\
+XX^{T}w = \lambda w
+
+
+result2
+
+\begin{align*}
+\underset{w}{max} (w^{T}XX^{T}w)&=\underset{w}{max} (w^{T}\lambda w)\\
+&=\underset{w}{max} (\lambda w^{T}w) = max \lambda
+\end{align*}
