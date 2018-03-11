@@ -1,0 +1,16 @@
+result
+
+\begin{align*} 
+\Lambda &= \Lambda^{T}\\
+B&=Z^TZ=V\Lambda V^T\\
+Z^TZ&=V\Lambda V^T=V\sqrt{\Lambda} \sqrt{\Lambda^T}V^T\\
+Z&=\sqrt{\Lambda}V^T
+\end{align*}
+
+
+result2
+
+\begin{align*} 
+
+Z&=\sqrt{\tilde{\Lambda}}{\tilde{V}}^{T}
+\end{align*}
