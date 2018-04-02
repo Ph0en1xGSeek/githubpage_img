@@ -1,0 +1,6 @@
+D
+
+\begin{align*}
+D&=D_1 \cup D_2 \cup ...\cup D_k\\
+D_{i}& \neq D_{j} \ (i \neq j)
+\end{align*}

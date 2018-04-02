@@ -40,3 +40,41 @@ p_{ij}&=\frac{\exp(-\left \| x_i-x_j \right \|^2/2\sigma^2)}{\sum_{k \neq l}\exp
 q_{ij}&=\frac{(1+\left \| y_i-y_j \right \|^2)^{-1}}{\sum_{k \neq l}(1+\left \| y_k-y_l \right \|^2)^{-1}}\\
 \frac{\partial{C}}{\partial{y_i}}&=4\sum_j(p_{ij}-q_{ij})(y_{i}-y_{j})(1+\left \| y_i-y_j \right \|^2)^{-1}\\
 \end{align*}
+
+largevis_p
+
+\begin{align*}
+p_{j|i}&=\frac{\exp(-\left \| x_i-x_j \right \|^2/2\sigma^2)}{\sum_{(i,k)\in E}\exp(-\left \| x_i-x_k \right \|^2/2\sigma^2)}\\
+p_{i|i}&=0\\ \\
+w_{ij}&=\frac{p_{j|i}+p_{i|j}}{2N}
+\end{align*}
+
+probability
+
+\begin{align*}
+P(e_{ij}=1)&=f(\left \| y_{i}-y_{j} \right\|)\\
+P(e_{ij}=w_{ij})&=P(e_{ij}=1)^{w_{ij}}
+\end{align*}
+
+object
+
+\begin{align*}
+O&=\prod_{(i,j)\in E}p(e_{ij}=1)^{w_{ij}} \prod_{(i,j)\in \bar{E}}(1-p(e_{ij}=1))^{\gamma}\\
+&\propto \sum_{(i,j)\in E}w_{ij}\log {p(e_{ij}=1)} + \sum_{(i,j)\in \bar{E}}\gamma \log {(1-p(e_{ij}=1))}
+\end{align*}
+
+negative
+
+\begin{align*}
+P_{n} \propto d_{j}^{0.75}
+\end{align*}
+
+
+negative_object
+
+\begin{align*}
+O&=\sum_{(i,j)\in E}w_{ij}\log {p(e_{ij}=1)} + \sum_{k=1}^{m}E_{jk}\sim P_{n}(j)\gamma \log {(1-p(e_{jk}=1))}
+\end{align*}
+
+
+
