@@ -9,3 +9,7 @@ D_{i}& \neq D_{j} \ (i \neq j)
 negative_sampling
 
 P(w_i)=\frac{f(w_i)^{3/4}}{\sum_{j=0}^n(f(w_j)^{3/4})}
+
+subsampling
+
+P(w_i) = 1 - \sqrt{\frac{t}{f(w_i)}}
