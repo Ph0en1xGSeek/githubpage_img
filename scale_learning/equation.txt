@@ -1,0 +1,3 @@
+Dm
+
+D_M(x) = \sqrt{(x-\mu)^{T}\Sigma^{-1}(x-\mu)}
