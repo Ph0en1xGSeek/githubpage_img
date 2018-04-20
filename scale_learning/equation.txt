@@ -1,3 +1,52 @@
 Dm
 
 D_M(x) = \sqrt{(x-\mu)^{T}\Sigma^{-1}(x-\mu)}
+
+Dxy
+
+D_M(x,y) = \sqrt{(x-y)^{T}\Sigma^{-1}(x-y)}
+
+F
+
+\begin{align*}
+F&=(F_{1},F_{2},...,F_{m}) = U^{T}X\\
+\mu_{F}&=(\mu_{1},\mu_{2},...,\mu_{m})\\\
+(F-\mu_{F}) &= U^{T}(X-\mu_{X})
+\end{align*}
+
+sigma
+
+\begin{align*}
+(F-\mu_{F})(F-\mu_{F})^{T}&=\begin{bmatrix}
+ \lambda_{1}  &  & &\\ 
+ &  \lambda_{2}  & &\\ 
+ &  &  ... &\\ 
+ &  &  & \lambda_{4}\\
+\end{bmatrix}\\
+&=U^{T}(X-\mu_{X})(X-\mu_{X})^{T}U\\
+&=U^{T}\Sigma_{X}U\\
+\end{align*}
+
+MD
+
+\begin{align*}
+D_{M} &= (\frac{f_{1}-\mu_{F_{1}}}{\sqrt{\lambda_{1}}})^{2} + (\frac{f_{2}-\mu_{F_{2}}}{\sqrt{\lambda_{2}}})^{2} + ... + (\frac{f_{m}-\mu_{F_{m}}}{\sqrt{\lambda_{m}}})^{2}\\
+&=(f_{1}-\mu_{F_{1}},f_{2}-\mu_{F_{2}},...,f_{M}-\mu_{F_{M}})\begin{bmatrix}
+-\frac{1}{\lambda_{1}} &  &  & \\ 
+& -\frac{1}{\lambda_{2}}  &  & \\ 
+& &  ...  & \\ 
+& &  &  -\frac{1}{\lambda_{m}} 
+\end{bmatrix}
+\begin{pmatrix}
+f_{1}-\mu_{F_{1}}\\ 
+f_{2}-\mu_{F_{2}}\\ 
+...\\ 
+f_{m}-\mu_{F_{m}}
+\end{pmatrix}\\
+&=(f-\mu_{F})^{T}(U^{T}\Sigma_{X}U)^{-1}(f-\mu_{F})\\
+&=(x-\mu_{X})^{T}UU^{T}\Sigma_{X}^{-1}UU^{T}(x-\mu_{X})\\
+&=(x-\mu_{X})^{T}\Sigma_{X}^{-1}(x-\mu_{X})\\
+\end{align*}
+
+
+
