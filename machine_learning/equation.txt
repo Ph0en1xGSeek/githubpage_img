@@ -13,3 +13,46 @@ P(w_i)=\frac{f(w_i)^{3/4}}{\sum_{j=0}^n(f(w_j)^{3/4})}
 subsampling
 
 P(w_i) = 1 - \sqrt{\frac{t}{f(w_i)}}
+
+
+sgd
+
+\begin{align*}
+\mathbf{W} \leftarrow \mathbf{W} - \eta \frac{\partial L}{\partial \mathbf{W}}
+\end{align*}
+
+momentum
+
+\begin{align*}
+v &\leftarrow \alpha v - \eta\frac{\partial L}{\partial \mathbf{W}} \\ 
+\mathbf{W} &\leftarrow \mathbf{W} + v\\
+\end{align*}
+
+
+nestrov
+
+\begin{align*}
+\mathbf{v} &\leftarrow \alpha \mathbf{v} - \eta\frac{\partial L}{\partial (\mathbf{W} + \alpha \mathbf{v})} \\ 
+\mathbf{W} &\leftarrow \mathbf{W} + \mathbf{v}\\
+\end{align*}
+
+nestrov2
+
+\begin{align*}
+\mathbf{v} &\leftarrow \alpha \mathbf{v} - \eta\frac{\partial L}{\partial \mathbf{W}} \\ 
+\mathbf{W} &\leftarrow \mathbf{W} - \eta\frac{\partial L}{\partial \mathbf{W}}\\
+\end{align*}
+
+nestrov3
+
+\begin{align*}
+\mathbf{v} &\leftarrow \alpha \mathbf{v} - \eta\frac{\partial L}{\partial \mathbf{W}} \\ 
+\mathbf{W} &\leftarrow \mathbf{W} - \eta\frac{\partial L}{\partial \mathbf{W}} + \alpha \mathbf{v}\\
+\end{align*}
+
+nestrov4
+
+\begin{align*}
+\mathbf{W} &\leftarrow \mathbf{W} + \alpha^2\mathbf{v} -(1 + \alpha) \eta\frac{\partial L}{\partial \mathbf{W}}\\
+\mathbf{v} &\leftarrow \alpha \mathbf{v} - \eta\frac{\partial L}{\partial \mathbf{W}} \\ 
+\end{align*}
