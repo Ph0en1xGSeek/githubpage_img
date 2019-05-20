@@ -32,10 +32,10 @@ MD
 \begin{align*}
 D_{M} &= (\frac{f_{1}-\mu_{F_{1}}}{\sqrt{\lambda_{1}}})^{2} + (\frac{f_{2}-\mu_{F_{2}}}{\sqrt{\lambda_{2}}})^{2} + ... + (\frac{f_{m}-\mu_{F_{m}}}{\sqrt{\lambda_{m}}})^{2}\\
 &=(f_{1}-\mu_{F_{1}},f_{2}-\mu_{F_{2}},...,f_{M}-\mu_{F_{M}})\begin{bmatrix}
--\frac{1}{\lambda_{1}} &  &  & \\ 
-& -\frac{1}{\lambda_{2}}  &  & \\ 
+\frac{1}{\lambda_{1}} &  &  & \\ 
+& \frac{1}{\lambda_{2}}  &  & \\ 
 & &  ...  & \\ 
-& &  &  -\frac{1}{\lambda_{m}} 
+& &  &  \frac{1}{\lambda_{m}} 
 \end{bmatrix}
 \begin{pmatrix}
 f_{1}-\mu_{F_{1}}\\ 
