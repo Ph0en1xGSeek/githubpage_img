@@ -56,3 +56,43 @@ nestrov4
 \mathbf{W} &\leftarrow \mathbf{W} + \alpha^2\mathbf{v} -(1 + \alpha) \eta\frac{\partial L}{\partial \mathbf{W}}\\
 \mathbf{v} &\leftarrow \alpha \mathbf{v} - \eta\frac{\partial L}{\partial \mathbf{W}} \\ 
 \end{align*}
+
+adagrad
+
+\begin{align*}
+\mathbf{h} &\leftarrow \mathbf{h} + \frac{\partial L}{\partial \mathbf{W}} \odot \frac{\partial L}{\partial \mathbf{W}} \\ 
+\mathbf{W} &\leftarrow \mathbf{W} - \eta \frac{1}{\delta + \sqrt{\mathbf{h}}}\frac{\partial L}{\partial \mathbf{W}}\\
+\end{align*}
+
+rmsprop
+
+\begin{align*}
+\mathbf{h} &\leftarrow \rho  \mathbf{h} + (1-\rho) \frac{\partial L}{\partial \mathbf{W}} \odot \frac{\partial L}{\partial \mathbf{W}} \\ 
+\mathbf{W} &\leftarrow \mathbf{W} - \eta \frac{1}{\sqrt{\delta + \mathbf{h}}}\frac{\partial L}{\partial \mathbf{W}}\\
+\end{align*}
+
+
+adam1
+
+\begin{align*}
+  \mathbf{m} &\leftarrow \beta_{1} \mathbf{m} + (1 - \beta_{1}) \frac{\partial L}{\partial \mathbf{W}}\\
+  \mathbf{v} &\leftarrow \beta_{2} \mathbf{v} + (1 - \beta_{2}) (\frac{\partial L}{\partial \mathbf{W}} \odot \frac{\partial L}{\partial \mathbf{W}})\\
+\end{align*}
+
+
+adam2
+
+\begin{align*}
+  \hat{\mathbf{m}} &\leftarrow \frac{\mathbf{m}}{1-\beta_{1}^{t}}\\
+  \hat{\mathbf{v}} &\leftarrow \frac{\mathbf{v}}{1-\beta_{2}^{t}}
+\end{align*}
+
+
+adam3
+
+\begin{align*}
+  \mathbf{W} \leftarrow \mathbf{W} - \eta \frac{\hat{\mathbf{m}}}{\sqrt{\hat{\mathbf{v}}} + \delta}
+\end{align*}
+
+
+
